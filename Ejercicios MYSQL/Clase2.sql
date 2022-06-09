@@ -9,7 +9,7 @@ CREATE TABLE film
   release_year DATE,
   CONSTRAINT film_id_pk PRIMARY KEY (film_id)
 );
-
+z
 CREATE TABLE actor
 ( actor_id INT AUTO_INCREMENT,
   first_name VARCHAR(30),
@@ -35,7 +35,7 @@ FOREIGN KEY (actor_id1)
 REFERENCES actor (actor_id);
 
 ALTER TABLE film_actor ADD
-CONSTRAINT fk_film_id1 
+CONSTRAINT fk_film_id1 	
 FOREIGN KEY (film_id1) 
 REFERENCES film (film_id);
 
@@ -65,7 +65,7 @@ INSERT
 	descripcion,
 	release_year)
 VALUES ('Pokemon',
-'niño de 13 captura bichos',
+'niï¿½o de 13 captura bichos',
 '2022-4-25');
 
 INSERT

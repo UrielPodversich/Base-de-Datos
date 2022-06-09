@@ -118,7 +118,7 @@ WHERE
 		FROM
 			film f
 		WHERE
-			f.title LIKE 'BETRAYED REAR'
+			f.title LIKE 'BETRAYED REAR' AND 
 			f.title LIKE 'CATCH AMISTAD'));
 -- 8. List all the actors that didn't work in 'BETRAYED REAR' or 'CATCH AMISTAD'
 SELECT
