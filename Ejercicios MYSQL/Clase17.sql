@@ -55,7 +55,7 @@ SELECT a.last_name FROM actor a;
 ALTER TABLE film_text 
 ADD FULLTEXT(description);
 
-SELECT f.description FROM film f WHERE f.description LIKE '%A%';
+SELECT f.description FROM film f WHERE f.description LIKE '%Action%';
 -- 0.06 sec
 -- 0.18 sec
 -- 0.20 sec
