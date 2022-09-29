@@ -97,17 +97,17 @@ CREATE TRIGGER before_employees_update
     FOR EACH ROW 
 BEGIN
     SET NEW.lastUpdate=NOW();
-END
+END $$
+
+
 DELIMITER ;
 
-DELIMITER $$
 CREATE TRIGGER before_employees_insert
     BEFORE INSERT ON employees
     FOR EACH ROW 
 BEGIN
-	SET NEW.lastUpdate=NOW();
-END
-DELIMITER ;
+	SET NEW.lastUpdate = CURRENT_TIMESTAMP();
+END;
 
 
 -- 6- Find all the triggers in sakila db related to loading film_text table. What do they do? Explain each of them using its source code for the explanation.
@@ -145,4 +145,4 @@ CREATE DEFINER=`user`@`%` TRIGGER `upd_film` AFTER UPDATE ON `film` FOR EACH ROW
   END
   
 -- Lo mismo que los anteriores, pero esta vez con  un INSERT. Luego de un INSERT, se inserten
--- los datos que se encuentran dentro de la tabla, con sus paremetros y con los valores nuevos. 
+-- los datos que se encuentran dentro de la tabla, con sus paremetros y con los valores nuevos.
